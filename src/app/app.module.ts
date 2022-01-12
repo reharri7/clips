@@ -9,11 +9,19 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { VideoModule } from './video/video.module';
+import { ManageComponent } from './video/manage/manage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent,
+    AboutComponent,
+    ManageComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -21,7 +29,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     UserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    VideoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
