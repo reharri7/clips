@@ -12,7 +12,6 @@ export class NavComponent implements OnInit {
   constructor(
     public modal: ModalService,
     public auth: AuthService,
-
     ) {
 
      }
@@ -25,6 +24,7 @@ export class NavComponent implements OnInit {
 
     this.modal.toggleModal('auth');
   }
+
 
 
 }
